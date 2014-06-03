@@ -92,7 +92,7 @@ public class SwipeDismissViewTouchListener implements View.OnTouchListener {
                                          Card card,
                                          DismissCallbacks callbacks) {
         ViewConfiguration vc = ViewConfiguration.get(cardView.getContext());
-        mSlop = vc.getScaledTouchSlop();
+        mSlop = vc.getScaledTouchSlop() * 3;
         mMinFlingVelocity = vc.getScaledMinimumFlingVelocity() * 16;
         mMaxFlingVelocity = vc.getScaledMaximumFlingVelocity();
         mAnimationTime = cardView.getContext().getResources()
